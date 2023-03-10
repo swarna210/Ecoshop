@@ -1,18 +1,39 @@
 import React from 'react';
-import {View ,Text,ScrollView} from 'react-native'
-import MyTab from './TopTab'
+import { View, ScrollView, Text, StyleSheet, Dimensions } from 'react-native';
 
-function App() {
-  return<>
-         <ScrollView>
-         <Intro1/>
-    <MyTab />
-         </ScrollView>
-    
-  </>
-   
-   
-  
-}
+const { width } = Dimensions.get('window');
 
-export default App;
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+  },
+  page: {
+    width,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+});
+
+const PagingScrollViewExample = () => {
+  return (
+    <View style={styles.container}>
+      <ScrollView
+        horizontal
+        pagingEnabled
+        showsHorizontalScrollIndicator={false}
+      >
+        <View style={[styles.page, { backgroundColor: 'white' }]}>
+          <Text>Profile</Text>
+        </View>
+        <View style={[styles.page, { backgroundColor: 'green' }]}>
+          <Text>Page 2</Text>
+        </View>
+        <View style={[styles.page, { backgroundColor: 'blue' }]}>
+          <Text>Page 3</Text>
+        </View>
+      </ScrollView>
+    </View>
+  );
+};
+
+export default PagingScrollViewExample;

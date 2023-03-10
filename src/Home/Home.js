@@ -11,8 +11,10 @@ export default function Home({navigation}){
         <View style={Styles.maincontainer}>
            <View style={Styles.firstContainer}>
                 <View style={Styles.logoContainer}>
-                    <Image style={Styles.logo} source={require('../../assets/cartlogo.png')}/>
-                     <Text style={Styles.logoStyle} >Eco Shop</Text>
+                    <View style={{height:60,width:180,
+                            alignItems:'center',justifyContent:'center'}}>
+                        <Image style={Styles.logo} source={require('../../assets/logo3.png')} />
+                    </View>
                      <Icon style={Styles.cartIcon} 
                         name="cart" size={35} color="white"/>
                         <Badge value={3}  
@@ -101,7 +103,7 @@ export default function Home({navigation}){
             </View>
             </View>
             <View  style={Styles.slide3}>
-            <Text style={Styles.textSlider}>And simple</Text>
+            <Text style={Styles.textSlider}>Welcome</Text>
             </View>
         </Swiper>
         </View>
@@ -232,17 +234,13 @@ const Styles = StyleSheet.create({
         marginLeft:10
     },
     logo:{
-        height:50,
-        width:50
+        height:150,
+        width:180,
+        resizeMode:'contain',
     },
-    logoStyle:{
-        color:'white',
-        fontSize:20,
-        marginTop:10,
-        fontWeight:'bold'
-    },
+    
     cartIcon:{
-        marginLeft:150,
+        marginLeft:100,
         
     },
     searchContainer:{

@@ -29,15 +29,13 @@ const BottomTab = createBottomTabNavigator()
 function Mystack(){
   return(
     <Stack.Navigator>
-      {/* <Stack.Screen name='PopularSell' component={PopularSell} options={{headerShown:false}}/> */}
+     {/* <Stack.Screen name='Arrivals' component={Arrivals} options={{headerShown:false}}/> */}
       <Stack.Screen name='Logo' component={Logo} options={{headerShown:false}}/>
       <Stack.Screen name='Intro1' component={Intro1} options={{headerShown:false}}/>
       <Stack.Screen name='Intro2' component={Intro2} options={{headerShown:false}}/>
       <Stack.Screen name='Intro3' component={Intro3} options={{headerShown:false}}/>
-      <Stack.Screen name='Home' component={Home} options={{headerShown:false}}/>
       <Stack.Screen name='Bottom' component={MyBottomTab} options={{headerShown:false}}/>
       <Stack.Screen name='Categories' component={Categories} options={{headerShown:false}}/>
-      {/* PopularSell */}
       <Stack.Screen name='PopularSell' component={PopularSell} options={{headerShown:false}}/>
       <Stack.Screen name='Arrivals' component={Arrivals} options={{headerShown:false}}/>
     </Stack.Navigator>

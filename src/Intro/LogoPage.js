@@ -4,11 +4,14 @@ export default function Logo({navigation}){
     return(
         <View style={Styles.container} >
           <View style={Styles.logocontainer} >
-                <Image style={Styles.imageLogo} source={require('../../assets/111.png')}/>
+                <Image style={Styles.imageLogo} source={require('../../assets/logo1.png')}/>
           </View>
            <View style={Styles.textContainer}>
-            <Image style={Styles.logo} source={require('../../assets/cartlogo.png')}/> 
-            <Text style={Styles.headingText} onPress={()=> navigation.navigate('Intro1')}>Eco shop</Text>
+
+            <Image style={Styles.logo}
+                onPress={()=> navigation.navigate('Intro1')}
+                source={require('../../assets/logo3.png')}/> 
+            {/* <Text style={Styles.headingText} >Eco shop</Text> */}
            </View>
            <View style={Styles.discriptionContainer}>
                     <Text style={Styles.discriptiontext} onPress={()=> navigation.navigate('Intro1')}>
@@ -25,12 +28,12 @@ const Styles = StyleSheet.create({
     //    justifyContent:"center"
     },
     imageLogo:{
-        height:200,
-        width:250
+        height:450,
+        width:300
     },
     logo:{
-        height:50,
-        width:50
+        height:200,
+        width:300
     },
     textContainer:{
         flexDirection:'row',
@@ -45,17 +48,12 @@ const Styles = StyleSheet.create({
         width:"100%",
         alignItems:'center',
         justifyContent:'center',
-        // backgroundColor:'blue'
     },
     discriptionContainer:{
         height:'10%',
         width:"100%",
         alignItems:'center'
         // backgroundColor:'yellow'
-    },
-    headingText:{
-        color:'white',
-        fontSize:25
     },
     discriptiontext:{
         color:'white'

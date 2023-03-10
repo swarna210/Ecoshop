@@ -11,6 +11,7 @@ export default function Logo({navigation}){
                 </View>
                 <Text style={{fontWeight:'bold',fontSize:20,color:'black',marginLeft:80}}>All categories</Text>
             </View>
+            {/* row starts */}
             <View style={Styles.container}>
                 <View>
                     <View style={Styles.item}>

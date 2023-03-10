@@ -5,7 +5,7 @@ const Intro1 = ({navigation}) => {
   return (
 
     <View style={Styles.container}>
-      <Text style={Styles.skip} onPress={()=> navigation.navigate('Home')}>Skip</Text>
+      <Text style={Styles.skip} onPress={()=> navigation.navigate('Bottom')}>Skip</Text>
       <View style={Styles.container1}>
       <Image style={Styles.productImage} source={require('../../assets/product.jpg')}/>
       <Text style={Styles.heading}>Choose Product</Text>

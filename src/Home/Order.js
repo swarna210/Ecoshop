@@ -22,8 +22,8 @@ const PagingScrollViewExample = () => {
         pagingEnabled
         showsHorizontalScrollIndicator={false}
       >
-        <View style={[styles.page, { backgroundColor: 'red' }]}>
-          <Text>Page 1</Text>
+        <View style={[styles.page, { backgroundColor: 'white' }]}>
+          <Text>Order</Text>
         </View>
         <View style={[styles.page, { backgroundColor: 'green' }]}>
           <Text>Page 2</Text>

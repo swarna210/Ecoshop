@@ -1,32 +1,61 @@
-import React from 'react';
-import { StyleSheet, View, Text,ScrollView,Image } from 'react-native';
+import React, { useState } from 'react';
+import { View, Text,StyleSheet ,ScrollView} from 'react-native';
+import Icon from 'react-native-vector-icons/AntDesign'
+import { Dropdown } from "react-native-element-dropdown";
 
-export default function App() {
-  return (
-    <View style={Styles.container}>
-        
+const data =[
+    {label:'One',value:'One'},
+    {label:'Two',value:'Two'},
+    {label:'Three',value:'Three'},
+    {label:'Four',value:'Four'},
+]
 
-
-
-
-      <View style={Styles.bottom}>
-        <Text>Bottom View Component</Text>
-      </View>
+export default function Arrivals(){
+  return(
+    <View>
+          
+          <View>
+          <Text>New Arrivals</Text>
+          <Dropdown data={data} style={Styles.dropdownStyle}
+          containerStyle={StyleSheet.dropdownContainerStyle}
+          itemContainerStyle={Styles.dropdownitemContainerStyle}
+          dropdownContainerStyle={{position:'absolute',marginRight:200}}
+          renderRightIcon={()=> null}
+                        activeColor='#1F3341'
+                        placeholder={<Icon name="menu-unfold" size={25} />}
+                        labelField="label"
+                        valueField="value"/>
+          </View>
+          {/* start of row */}
+            <ScrollView>
+              <View>
+                
+              </View>
+            </ScrollView>
     </View>
-  );
+  )
 }
 
 const Styles = StyleSheet.create({
-  container: {
-    flex: 1,
+  dropdownStyle:{
+      backgroundColor:'red',
+      height:40,
+      width:40,
+      // marginLeft:310,
+    marginLeft:200
   },
-  bottom: {
-    position: 'absolute',
-    bottom: 0,
-    width: '100%',
-    backgroundColor: 'lightblue',
-    alignItems: 'center',
-    justifyContent: 'center',
-    paddingVertical: 20,
+  dropdownContainerStyle:{
+      // width:200,
+      backgroundColor:'green',
+      
+      // position:'absolute',
+      // right:-300
   },
-});
+  dropdownitemContainerStyle:{
+    height:50,
+    width:450,
+    // position:'relative',
+    // right:30
+  }
+  // end of dropdown css
+})
